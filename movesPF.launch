@@ -1,0 +1,22 @@
+<launch>
+
+	<node pkg="turtlesim" type="turtlesim_node" name="turtle" />
+
+	<node pkg="rosservice" type="rosservice" name="kill_turtle_1"
+		args="call /kill 'turtle1' "/>
+	
+	<node pkg="rosservice" type="rosservice" name="load_turtle2"
+		args="call /spawn 3 6 0 'turtle2' "/>
+	
+	<node pkg="rosservice" type="rosservice" name="load_turtle3"
+		args="call /spawn 3 3 0 'turtle3' "/>
+
+	<node pkg="rosservice" type="rosservice" name="load_turtle4"
+		args="call /spawn 10 1 0 'turtle4' "/>
+
+	<node pkg="rosservice" type="rosservice" name="load_turtle1"
+		args="call /spawn 7 7 0 'turtle1' "/> 
+
+	<node pkg="paquete1" type="TortugaPF.py" name="TortugaPF" />
+
+</launch> 
